@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>RPS | TheGame</title>
+
+        <link rel="stylesheet" href="style.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <header>
+            <nav>
+                <a href="#">RPS | TheGame</a>
+                <a id="guide" href="#">How to play?</a>
+            </nav>
+        </header>
+
+        <section id="gameboard">
+            <h1 class="result"></h1>
+            <div class="container">
+                <div class="player">
+                    <h2 id="player-title">Make your choice:</h2>
+                    <div class="moves">
+                        <div
+                            onclick="playRound(1)"
+                            id="rock"
+                            class="move"
+                        ></div>
+                        <div
+                            onclick="playRound(2)"
+                            id="paper"
+                            class="move"
+                        ></div>
+                        <div
+                            onclick="playRound(3)"
+                            id="scissors"
+                            class="move"
+                        ></div>
+                    </div>
+                </div>
+
+                <div class="ai">
+                    <p class="countdown"></p>
+                    <div id="aiMove" class="move"></div>
+                </div>
+            </div>
+            <button id="btnReplay" onclick="playAgain()">Rematch</button>
+        </section>
+
+        <footer>
+            <a
+                href="https://github.com/StjepanPavlekovic"
+                target="_blank"
+                class="footer-info"
+            >
+                <span>Made by Pavlek | TheOdinProject</span><br />
+                <span>2023</span>
+            </a>
+        </footer>
+
+        <dialog id="dialog">
+            <div class="dialog-header">
+                <span>How to play:</span>
+                <button onclick="closeDialog()" id="closeDialogHeader">
+                    X
+                </button>
+            </div>
+            <p>
+                Pick a move out of the 3 available ones and lose. You are free
+                to try as many times as you like, but there is just no way you
+                can win since this game uses an advanced prediction model A.I.
+            </p>
+        </dialog>
+        <script src="script.js"></script>
+    </body>
+</html>
